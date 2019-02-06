@@ -5,4 +5,9 @@ const slugify = (str, sep = '-') =>
     .normalize('NFD') // Quito todas las tildes
     .replace(/[\u0300-\u036f]/g,"")
 
-module.exports = { slugify }
+const trim = str =>
+  str
+    .replace(' ', '')
+    .replace(/\s+$/,'')
+
+module.exports = { slugify, trim }
