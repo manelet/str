@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/manelgarcia/str.svg?branch=master)](https://travis-ci.com/manelgarcia/str)
+
 # str
 
 ## Propuestas
