@@ -3,6 +3,7 @@ node_js:
   - "10"
 install:
   - npm install -g codecov
+  - npm install -D mocha chai
 script:
   - npm test
   - codecov
