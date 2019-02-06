@@ -3,6 +3,7 @@ node_js:
   - "10"
 install:
   - npm install -g codecov
+  - npm i nyc mocha
 script:
   - nyc mocha --reporter lcovonly -- -R spec
   - codecov
