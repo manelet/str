@@ -4,7 +4,7 @@
   "description": "## Propuestas",
   "main": "index.js",
   "scripts": {
-    "test": "nyc cover --reporter=text-lcov mocha"
+    "test": "nyc mocha"
   },
   "repository": {
     "type": "git",
