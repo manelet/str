@@ -1,3 +1,4 @@
+*.lcov
 # Logs
 logs
 *.log

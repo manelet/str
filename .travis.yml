@@ -1,6 +1,6 @@
 language: node_js
 node_js:
   - "10"
-script:
-  - nyc cover --reporter=text-lcov mocha
-  - codecov
+# script:
+#   - nyc --reporter=text-lcov mocha
+#   - codecov
