@@ -3,7 +3,7 @@ const slugify = (str, sep = '-') =>
     .toLowerCase()
     .replace(/ /g, sep) // Cambio espacios por el separador
     .normalize('NFD') // Quito todas las tildes
-    .replace(/[\u0300-\u036f]/g,"")
+    .replace(/[\u0300-\u036f]/g, '')
 
 const trim = str =>
   str
@@ -13,7 +13,7 @@ const trim = str =>
 const compose = (...fns) =>
   fns.reduceRight((prevFn, nextFn) =>
     (...args) => nextFn(prevFn(...args)),
-    value => value
+  value => value
   )
 
-module.exports = { slugify, trim, compose }
+module.exports = { slugify, trim, compose }
