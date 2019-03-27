@@ -1,19 +1,32 @@
-const slugify = (str, sep = '-') =>
-  trim(str)
-    .toLowerCase()
-    .replace(/ /g, sep) // Cambio espacios por el separador
-    .normalize('NFD') // Quito todas las tildes
-    .replace(/[\u0300-\u036f]/g, '')
+// import 'core-js'
+// import '@babel/polyfill'
+import functions from './methods'
 
-const trim = str =>
-  str
-    .replace(/^\s+/, '')
-    .replace(/\s+$/, '')
+class Str {
+  constructor (value) {
+    this._value = value
 
-const compose = (...fns) =>
-  fns.reduceRight((prevFn, nextFn) =>
-    (...args) => nextFn(prevFn(...args)),
-  value => value
-  )
+    Object.keys(functions).map(f => {
+      this[f] = function () {
+        this._value = functions[f](this._value)
+        return this
+      }
+    })
+  }
 
-module.exports = { slugify, trim, compose }
+  get value () {
+    return this._value
+  }
+}
+
+function str (value) {
+  return new Str(value)
+}
+
+// const compose = (...fns) =>
+//   fns.reduceRight((prevFn, nextFn) =>
+//     (...args) => nextFn(prevFn(...args)),
+//   value => value
+//   )
+
+export default str
