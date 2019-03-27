@@ -1,11 +1,11 @@
 // import camelCase from './camelcase'
 import slugify from './slugify'
-import toLowerCase from './toLowerCase'
+import lower from './lower'
 import trim from './trim'
 
 export default {
   // camelCase,
   slugify,
-  toLowerCase,
+  lower,
   trim
 }

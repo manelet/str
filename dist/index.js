@@ -1,19 +1,49 @@
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+var trim = function trim(str) {
+  return str.replace(/^\s+/, '').replace(/\s+$/, '');
+};
+
+var slugify = function slugify(str) {
+  var sep = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '-';
+  return trim(str).toLowerCase().replace(/ /g, sep) // Cambio espacios por el separador
+  .normalize('NFD') // Quito todas las tildes
+  .replace(/[\u0300-\u036f]/g, '');
+};
+
+var toLowerCase = (function (str) {
+  return str.toLowerCase();
 });
-exports.default = void 0;
 
-var _methods = _interopRequireDefault(require("./methods"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+// import camelCase from './camelcase'
+var functions = {
+  // camelCase,
+  slugify: slugify,
+  toLowerCase: toLowerCase,
+  trim: trim
+};
 
 var Str =
 /*#__PURE__*/
@@ -24,9 +54,9 @@ function () {
     _classCallCheck(this, Str);
 
     this._value = value;
-    Object.keys(_methods.default).map(function (f) {
+    Object.keys(functions).map(function (f) {
       _this[f] = function () {
-        this._value = _methods.default[f](this._value);
+        this._value = functions[f](this._value);
         return this;
       };
     });
@@ -45,12 +75,5 @@ function () {
 function str(value) {
   return new Str(value);
 } // const compose = (...fns) =>
-//   fns.reduceRight((prevFn, nextFn) =>
-//     (...args) => nextFn(prevFn(...args)),
-//   value => value
-//   )
 
-
-var _default = str;
-exports.default = _default;
-module.exports = exports.default;
+module.exports = str;
