@@ -3,18 +3,18 @@
 # str
 
 ## TODO
-[-] Add JSDocs
-[-] Implement npm-publish
+- [ ] Style docs
+- [ ] Implement npm-publish
 
 ## Proposals
-[-] startsWith
-[-] endsWith
-[-] replace
-[-] count
-[-] capitalize
-[-] upper
+- [ ] startsWith
+- [ ] endsWith
+- [ ] replace
+- [ ] count
+- [ ] capitalize
+- [ ] upper
 
 ## Methods
-[-] slugify
-[-] trim
-[-] lower
+- [ ] slugify
+- [ ] trim
+- [ ] lower
