@@ -6,7 +6,8 @@
   "scripts": {
     "test": "nyc mocha",
     "start": "npx babel-node ./src/index.js",
-    "build": "npx babel-node ./scripts/build.js"
+    "build": "npx babel-node ./scripts/build.js",
+    "docs": "npx jsdoc ./src/* -d ./docs"
   },
   "repository": {
     "type": "git",

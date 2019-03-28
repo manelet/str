@@ -1,5 +1,11 @@
 import functions from './methods'
 
+/**
+ @description Add all methods to the class and set the value to a hidden prop
+ @param {String} value
+ @class
+ @classdesc Str chainable class
+ */
 class Str {
   constructor (value) {
     this._value = value
