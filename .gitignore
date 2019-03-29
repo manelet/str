@@ -1,6 +1,5 @@
-./dist/*
-!./dist/str.js
-!./dist/str.min.js
+dist
+.DS_Store
 
 *.lcov
 # Logs
