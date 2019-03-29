@@ -8,9 +8,10 @@
     "start": "npx babel-node ./src/index.js",
     "build:code": "npx babel-node ./scripts/build.js",
     "build:docs": "npx jsdoc ./src/* -d ./docs && git add . && git push",
+    "postbuild:docs": "npm publish ./dist",
     "deploy": "npm run build:code",
     "predeploy": "npm test",
-    "postdeploy": "codecov -t 324aaa4d-c06b-49df-941b-8566b195f430"
+    "postdeploy": "npx codecov -t 324aaa4d-c06b-49df-941b-8566b195f430 && npm run build:docs"
   },
   "repository": {
     "type": "git",

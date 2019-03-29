@@ -54,6 +54,12 @@ const build = async () => {
     fs.readFileSync(path.join(__dirname, '../package.json'), 'utf-8'),
     'utf-8'
   )
+
+  fs.writeFileSync(
+    path.join(__dirname, '../dist/', 'README.md'),
+    fs.readFileSync(path.join(__dirname, '../README.md'), 'utf-8'),
+    'utf-8'
+  )
 }
 
 build()
