@@ -7,11 +7,10 @@
     "test": "nyc mocha",
     "start": "npx babel-node ./src/index.js",
     "build:code": "npx babel-node ./scripts/build.js",
-    "build:docs": "npx jsdoc ./src/* -d ./docs",
-    "joer": "echo TEST $1",
-    "deploy": "npm run build:code && npm run build:docs",
+    "build:docs": "npx jsdoc ./src/* -d ./docs && git add . && git push",
+    "deploy": "npm run build:code",
     "predeploy": "npm test",
-    "postdeploy": "git add ."
+    "postdeploy": "codecov -t 324aaa4d-c06b-49df-941b-8566b195f430"
   },
   "repository": {
     "type": "git",
