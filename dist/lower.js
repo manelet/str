@@ -5,6 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+/**
+ * @function lower
+ * @description Transform str to lower case
+ * @param {String} str
+ * @return {String} Lower cased string
+ * @example
+ * lower('TEST')
+ * // test
+ */
 var _default = function _default(str) {
   return str.toLowerCase();
 };

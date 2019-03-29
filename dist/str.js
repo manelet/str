@@ -20,9 +20,32 @@
     return Constructor;
   }
 
+  /**
+   * @function trim
+   * @description Trims left and right a string
+   * @param {String} str
+   * @return {String} Trimmed string
+   * @example
+   * trim(' This is a tesT ')
+   * // This is a tesT
+   */
   var trim = function trim(str) {
     return str.replace(/^\s+/, '').replace(/\s+$/, '');
   };
+
+  /**
+   * @function slugify
+   * @description Slugifys a string
+   * @param {String} str
+   * @param {String} del Delimiter, defaults to '-'
+   * @return {String} Slugified string
+   * @example
+   * slugify(' This is a tesT ')
+   * // this-is-a-test
+   * @example
+   * slugify(' This is a tesT ', ':')
+   * // this:is:a:test
+   */
 
   var slugify = function slugify(str, sep) {
     if (sep === void 0) {
@@ -34,7 +57,16 @@
     .replace(/[\u0300-\u036f]/g, '');
   };
 
-  var toLowerCase = (function (str) {
+  /**
+   * @function lower
+   * @description Transform str to lower case
+   * @param {String} str
+   * @return {String} Lower cased string
+   * @example
+   * lower('TEST')
+   * // test
+   */
+  var lower = (function (str) {
     return str.toLowerCase();
   });
 
@@ -42,9 +74,16 @@
   var functions = {
     // camelCase,
     slugify: slugify,
-    toLowerCase: toLowerCase,
+    lower: lower,
     trim: trim
   };
+
+  /**
+   @description Add all methods to the class and set the value to a hidden prop
+   @param {String} value
+   @class
+   @classdesc Str chainable class
+   */
 
   var Str =
   /*#__PURE__*/
@@ -55,7 +94,13 @@
       this._value = value;
       Object.keys(functions).map(function (f) {
         _this[f] = function () {
-          this._value = functions[f](this._value);
+          var _functions$f;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          this._value = (_functions$f = functions[f]).call.apply(_functions$f, [null, this._value].concat(args));
           return this;
         };
       });
@@ -73,7 +118,7 @@
 
   function str(value) {
     return new Str(value);
-  } // const compose = (...fns) =>
+  }
 
   return str;
 

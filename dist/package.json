@@ -6,7 +6,12 @@
   "scripts": {
     "test": "nyc mocha",
     "start": "npx babel-node ./src/index.js",
-    "build": "npx babel-node ./scripts/build.js"
+    "build:code": "npx babel-node ./scripts/build.js",
+    "build:docs": "npx jsdoc ./src/* -d ./docs",
+    "joer": "echo TEST $1",
+    "deploy": "npm run build:code && npm run build:docs",
+    "predeploy": "npm test",
+    "postdeploy": "git add ."
   },
   "repository": {
     "type": "git",
