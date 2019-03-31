@@ -7,11 +7,20 @@ import trim from '../src/methods/trim'
 import lower from '../src/methods/lower'
 import count from '../src/methods/count'
 import upper from '../src/methods/upper'
+import startsWith from '../src/methods/startsWith'
 
 describe('str individual methods test suite', () => {
-  it('should transform a string to uppercase', () => expect(upper('test')).to.equal('TEST'))
+  it('should check if a string starts with a substring', () =>
+    expect(startsWith('test', 'te')).to.equal(true))
 
-  it('should count characters in a string', () => expect(count('test')).to.equal(4))
+  it('should check if a string starts with a substring in certain position', () =>
+    expect(startsWith('testing', 'st', 2)).to.equal(true))
+
+  it('should transform a string to uppercase', () =>
+    expect(upper('test')).to.equal('TEST'))
+
+  it('should count characters in a string', () =>
+    expect(count('test')).to.equal(4))
 
   it('should slugify a string', () => {
     const text = 'EstO És 1N ÈjemPlo'
@@ -39,9 +48,13 @@ describe('str individual methods test suite', () => {
 })
 
 describe('str class test suite', () => {
+  it('should check if a string starts with a substring', () => expect(str('test').startsWith('te')).to.equal(true))
+
   it('should transform a string to uppercase', () => expect(str('test').upper().value).to.equal('TEST'))
 
   it('should count characters in a string', () => expect(str('test').length).to.equal(4))
+
+  it('should count characters in a string using the function', () => expect(str('test').count()).to.equal(4))
 
   it('should slugify a string', () => {
     const text = 'EstO És 1N ÈjemPlo'

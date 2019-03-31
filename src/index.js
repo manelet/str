@@ -1,6 +1,6 @@
 import functions from './methods'
 
-const NOT_CHAINABLE = ['count']
+const NOT_CHAINABLE = ['count', 'startsWith']
 
 /**
  @description Add all methods to the class and set the value to a hidden prop
@@ -16,7 +16,7 @@ class Str {
       this[f] = function (...args) {
         const r = functions[f].call(null, this.value, ...args)
 
-        if (f.includes(NOT_CHAINABLE)) {
+        if (NOT_CHAINABLE.includes(f)) {
           return r
         }
 

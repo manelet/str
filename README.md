@@ -6,14 +6,14 @@
 - [ ] Style docs
 
 ## Proposals
-- [ ] startsWith
+- [x] startsWith
 - [ ] endsWith
 - [ ] replace
 - [x] count
 - [ ] capitalize
-- [ ] upper
+- [x] upper
 
 ## Methods
-- [ ] slugify
-- [ ] trim
-- [ ] lower
+- slugify
+- trim
+- lower

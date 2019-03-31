@@ -9,6 +9,9 @@
  * @example
  * str('test').length
  * // 4
+ * @example
+ * str('test').count()
+ * // 4
  */
 
 export default str => String(str).length
