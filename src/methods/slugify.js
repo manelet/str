@@ -4,7 +4,7 @@ import trim from './trim'
  * @function slugify
  * @description Slugifys a string
  * @param {String} str
- * @param {String} [del] Delimiter, defaults to '-'
+ * @param {String} [del=-] Delimiter, defaults to '-'
  * @return {String} Slugified string
  * @example
  * slugify(' This is a tesT ')
