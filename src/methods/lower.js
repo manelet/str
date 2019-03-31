@@ -6,5 +6,8 @@
  * @example
  * lower('TEST')
  * // test
+ * @example
+ * str('TEST').lower().value
+ * // test
  */
 export default str => str.toLowerCase()

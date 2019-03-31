@@ -9,7 +9,7 @@
 - [ ] startsWith
 - [ ] endsWith
 - [ ] replace
-- [ ] count
+- [x] count
 - [ ] capitalize
 - [ ] upper
 

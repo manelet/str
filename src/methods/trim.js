@@ -6,6 +6,9 @@
  * @example
  * trim(' This is a tesT ')
  * // This is a tesT
+ * @example
+ * str(' This is a tesT ').trim().value
+ * // This is a tesT
  */
 const trim = str =>
   str

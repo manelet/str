@@ -12,6 +12,9 @@ import trim from './trim'
  * @example
  * slugify(' This is a tesT ', ':')
  * // this:is:a:test
+ * @example
+ * str(' This is a tesT ').slugify().value
+ * // this-is-a-test
  */
 const slugify = (str, sep = '-') =>
   trim(str)

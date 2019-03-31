@@ -1,5 +1,7 @@
 import functions from './methods'
 
+const NOT_CHAINABLE = ['count']
+
 /**
  @description Add all methods to the class and set the value to a hidden prop
  @param {String} value
@@ -8,18 +10,22 @@ import functions from './methods'
  */
 class Str {
   constructor (value) {
-    this._value = value
+    this.value = value
 
     Object.keys(functions).map(f => {
       this[f] = function (...args) {
-        this._value = functions[f].call(null, this._value, ...args)
+        const r = functions[f].call(null, this.value, ...args)
+
+        if (f.includes(NOT_CHAINABLE)) {
+          return r
+        }
+
+        this.value = r
         return this
       }
     })
-  }
 
-  get value () {
-    return this._value
+    this.length = this.count(this.value)
   }
 }
 

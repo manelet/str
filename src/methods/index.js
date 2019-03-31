@@ -1,10 +1,10 @@
-// import camelCase from './camelcase'
 import slugify from './slugify'
 import lower from './lower'
 import trim from './trim'
+import count from './count'
 
 export default {
-  // camelCase,
+  count,
   slugify,
   lower,
   trim
