@@ -6,8 +6,11 @@ import slugify from '../src/methods/slugify'
 import trim from '../src/methods/trim'
 import lower from '../src/methods/lower'
 import count from '../src/methods/count'
+import upper from '../src/methods/upper'
 
 describe('str individual methods test suite', () => {
+  it('should transform a string to uppercase', () => expect(upper('test')).to.equal('TEST'))
+
   it('should count characters in a string', () => expect(count('test')).to.equal(4))
 
   it('should slugify a string', () => {
@@ -36,6 +39,8 @@ describe('str individual methods test suite', () => {
 })
 
 describe('str class test suite', () => {
+  it('should transform a string to uppercase', () => expect(str('test').upper().value).to.equal('TEST'))
+
   it('should count characters in a string', () => expect(str('test').length).to.equal(4))
 
   it('should slugify a string', () => {
