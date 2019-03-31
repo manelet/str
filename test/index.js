@@ -9,8 +9,13 @@ import count from '../src/methods/count'
 import upper from '../src/methods/upper'
 import startsWith from '../src/methods/startsWith'
 import endsWith from '../src/methods/endsWith'
+import capitalize from '../src/methods/capitalize'
 
 describe('str individual methods test suite', () => {
+  it('should capitalize a string', () =>
+    expect(capitalize('test ')).to.equal('Test')
+  )
+
   it('should check if a string ends with a substring', () =>
     expect(endsWith('test', 'st')).to.equal(true)
   )
@@ -59,6 +64,10 @@ describe('str individual methods test suite', () => {
 })
 
 describe('str class test suite', () => {
+  it('should capitalize a string', () =>
+    expect(str('test ').capitalize().value).to.equal('Test')
+  )
+
   it('should check if a string ends with a substring', () =>
     expect(str('test').endsWith('st')).to.equal(true)
   )

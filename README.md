@@ -7,11 +7,12 @@
 
 ## Proposals
 - [x] startsWith
-- [ ] endsWith
+- [x] endsWith
 - [ ] replace
 - [x] count
-- [ ] capitalize
+- [x] capitalize
 - [x] upper
+- [ ] camelcase (pascalCase, etc...)
 
 ## Methods
 - slugify
