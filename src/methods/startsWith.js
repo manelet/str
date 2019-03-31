@@ -1,6 +1,6 @@
 /**
  * @function startsWith
- * @description Checks if a string starts with a provided character
+ * @description Checks if a string starts with the provided substring
  * @param {String} str
  * @param {String} substring
  * @param {Number} [pos=0] Position to start checking. Defaults to 0

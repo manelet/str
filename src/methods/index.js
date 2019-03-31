@@ -4,6 +4,7 @@ import trim from './trim'
 import count from './count'
 import upper from './upper'
 import startsWith from './startsWith'
+import endsWith from './endsWith'
 
 export default {
   count,
@@ -11,5 +12,6 @@ export default {
   lower,
   upper,
   trim,
-  startsWith
+  startsWith,
+  endsWith
 }

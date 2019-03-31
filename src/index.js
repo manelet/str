@@ -1,6 +1,6 @@
 import functions from './methods'
 
-const NOT_CHAINABLE = ['count', 'startsWith']
+const NOT_CHAINABLE = ['count', 'startsWith', 'endsWith']
 
 /**
  @description Add all methods to the class and set the value to a hidden prop
