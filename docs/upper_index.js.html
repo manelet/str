@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: upper/index.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -20,46 +20,31 @@
 
 <div class="wrapper">
     <div id="main">
-        <!--<h1 class="page-title">Home</h1>-->
+        <!--<h1 class="page-title">Source: upper/index.js</h1>-->
         
 
 
 
     
-
-
-
-
-
-
-
-
-
-    
-
-
     <section>
-        <article><p><a href="https://travis-ci.com/manelgarcia/str"><img src="https://travis-ci.com/manelgarcia/str.svg?branch=master" alt="Build Status"></a> <a href="https://codecov.io/gh/manelgarcia/str"><img src="https://codecov.io/gh/manelgarcia/str/branch/master/graph/badge.svg" alt="codecov"></a> <a href="https://github.com/manelgarcia/str/compare"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a> <a href="https://npmjs.com/package/str"><img src="https://img.badgesize.io/manelgarcia/str/master/dist/str.min.js" alt="Size"></a></p>
-<h1>str</h1><h2>TODO</h2><ul>
-<li>[ ] Style docs</li>
-</ul>
-<h2>Proposals</h2><ul>
-<li>[x] startsWith</li>
-<li>[x] endsWith</li>
-<li>[ ] replace</li>
-<li>[x] count</li>
-<li>[x] capitalize</li>
-<li>[x] upper</li>
-<li>[ ] camelcase (pascalCase, etc...)</li>
-</ul>
-<h2>Methods</h2><ul>
-<li>slugify</li>
-<li>trim</li>
-<li>lower</li>
-</ul></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @function upper
+ * @description Transform a string to uppercase
+ * @param {String} str
+ * @return {String} Uppercased string
+ * @example
+ * upper('test')
+ * // TEST
+ * @example
+ * str('test').upper().value
+ * // TEST
+ */
+
+export default str => String(str).toUpperCase()
+</code></pre>
+        </article>
     </section>
-
-
 
 
 
