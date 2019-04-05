@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha './src/**/*.spec.js'",
+    "test": "nyc mocha './src/**/*.spec.js' --require @babel/register --reporter spec",
     "start": "npx babel-node ./src/index.js",
     "watch:docs": "npx nodemon --watch ./scripts/docs/tmpl --watch ./scripts/docs/static/styles --watch ./scripts/docs/static/scripts --ext tmpl,css,js --exec \"npm run build:docs\"",
     "build:code": "npx babel-node ./scripts/build.js",

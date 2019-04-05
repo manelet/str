@@ -1,4 +1,4 @@
-import trim from './trim'
+import trim from '../trim'
 
 /**
  * @function capitalize

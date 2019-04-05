@@ -13,7 +13,7 @@
  * // true
  */
 
-export default (str, sub, pos) => {
+const endsWith = (str, sub, pos) => {
   str = String(str)
 
   if (!pos || typeof pos !== 'number' || !isFinite(pos) || Math.floor(pos) !== pos || pos > str.length) {
@@ -26,3 +26,5 @@ export default (str, sub, pos) => {
 
   return index !== -1 && index === pos
 }
+
+export default endsWith

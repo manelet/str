@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: methods/endsWith.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,46 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: methods/endsWith.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @function endsWith
+ * @description Checks if a string ends with the provided substring
+ * @param {String} str
+ * @param {String} substring
+ * @param {Number} [pos=0] Position to start checking. Defaults to 0
+ * @return {Boolean} True / False
+ * @example
+ * endsWith('test', 'st')
+ * // true
+ * @example
+ * str('test').endsWith('st')
+ * // true
+ */
 
+export default (str, sub, pos) => {
+  str = String(str)
 
-    <h3> </h3>
+  if (!pos || typeof pos !== 'number' || !isFinite(pos) || Math.floor(pos) !== pos || pos > str.length) {
+    pos = str.length
+  }
 
+  pos -= sub.length
 
+  const index = str.indexOf(sub, (pos - 1))
 
-
-
-
-
-
-
-
-    
-
-
-
-
-
+  return index !== -1 &amp;&amp; index === pos
+}
+</code></pre>
+        </article>
+    </section>
 
 
 
