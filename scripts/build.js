@@ -34,7 +34,7 @@ const build = async () => {
   for (let method of methods) {
     if (method !== 'index.js') {
       const file = route + '/' + method + '/index.js'
-      const fileDest = path.join(__dirname, '../dist', method)
+      const fileDest = path.join(__dirname, '../dist', method + '.js')
       const code = fs.readFileSync(file, 'utf-8')
       const result = await babel.transformAsync(code, babelOpts)
       fs.writeFileSync(fileDest, result.code, 'utf-8')
