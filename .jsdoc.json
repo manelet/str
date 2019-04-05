@@ -1,0 +1,18 @@
+{
+  "source": {
+    "include": "src/"
+  },
+  "opts": {
+    "template": "scripts/docs",
+    "encoding": "utf-8",
+    "destination": "docs/",
+    "recurse": true,
+    "verbose": true
+  },
+  "templates": {
+    "outputSourceFiles": false
+  },
+  "plugins": [
+    "plugins/markdown"
+  ]
+}
