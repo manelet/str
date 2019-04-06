@@ -16,6 +16,7 @@ export default {
       babelrc: false,
       // externalHelpers: false,
       // runtimeHelpers: true,
+      comments: false,
       presets: [
         ['@babel/env', { modules: false }]
       ]
