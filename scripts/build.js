@@ -30,13 +30,12 @@ const build = async () => {
   // // Transform functions and copy them to dist
   const route = path.join(__dirname, '../src/methods')
   const methods = fs.readdirSync(route)
-  const regex = /import (.*) from/gi
 
   for (let method of methods) {
     if (method !== 'index.js') {
       const file = route + '/' + method + '/index.js'
       const fileDest = path.join(__dirname, '../dist', method + '.js')
-      const code = fs.readFileSync(file, 'utf-8').replace(/..\//g, './')
+      const code = fs.readFileSync(file, 'utf-8')
       const result = await babel.transformAsync(code, babelOpts)
       fs.writeFileSync(fileDest, result.code, 'utf-8')
     }
