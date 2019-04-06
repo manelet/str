@@ -36,6 +36,7 @@
     "@babel/preset-env": "^7.4.2",
     "@babel/register": "^7.4.0",
     "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-transform-import-paths": "^1.0.1",
     "chai": "^4.2.0",
     "codecov": "^3.1.0",
     "jsdoc": "^3.5.5",
