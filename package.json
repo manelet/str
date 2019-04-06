@@ -9,7 +9,7 @@
     "watch:docs": "npx nodemon --watch ./scripts/docs/tmpl --watch ./scripts/docs/static/styles --watch ./scripts/docs/static/scripts --ext tmpl,css,js --exec \"npm run build:docs\"",
     "build:code": "npx babel-node ./scripts/build.js",
     "build:docs": "rm -fr ./docs && jsdoc -c .jsdoc.json -R ./README.md",
-    "postbuild:docs": "git add . && git com -am 'Deploy' && git push && npm version patch -m 'fix build' && npm publish ./dist",
+    "postbuild:docs": "git add . && git com -am 'Deploy' && git push && npm version patch -m 'fix individual methods import' && npm publish ./dist",
     "deploy": "npm run build:code",
     "predeploy": "npm test",
     "postdeploy": "npx codecov -t 324aaa4d-c06b-49df-941b-8566b195f430 && npm run build:docs"
