@@ -6,6 +6,7 @@ import upper from './upper'
 import startsWith from './startsWith'
 import endsWith from './endsWith'
 import capitalize from './capitalize'
+import camelcase from './camelcase'
 
 export default {
   count,
@@ -15,5 +16,6 @@ export default {
   trim,
   startsWith,
   endsWith,
-  capitalize
+  capitalize,
+  camelcase
 }
