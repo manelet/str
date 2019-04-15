@@ -1,6 +1,6 @@
 /**
  * @function count
- * @description Counts characters in string
+ * @description Counts characters in a string
  * @param {String} str
  * @return {Number} Number of characters
  * @example
