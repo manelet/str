@@ -1,19 +1,22 @@
-import trim from '../trim'
-
 /**
  * @function capitalize
- * @description Capitalizes a string
+ * @description Capitalizes a word, first letter uppercase, rest lowercase
  * @param {String} str
- * @return {String}
+ * @param {Boolean} restLower (Defaults to true)
+ * @return {String} Capitalized word
  * @example
- * capitalize('test')
+ * capitalize('tEsT')
  * // Test
  * @example
- * str('TEST').capitalize()
- * // Tets
+ * str('tEsT').capitalize.value
+ * // Test
+ * @example
+ * str('tEsT').capitalize(false)
+ * // TEsT
  */
-
-export default str => {
-  str = trim(str)
-  return String(str.charAt(0).toUpperCase()) + String(str.slice(1).toLowerCase())
-}
+export default (str, restLower = true) =>
+  str.charAt(0).toUpperCase() + (
+    restLower
+      ? str.slice(1).toLowerCase()
+      : str.slice(1)
+  )
