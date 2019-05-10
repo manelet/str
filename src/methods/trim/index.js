@@ -1,6 +1,6 @@
 /**
  * @function trim
- * @description Trims left and right a string
+ * @description Trims a string by the right and by the left
  * @param {String} str
  * @return {String} Trimmed string
  * @example

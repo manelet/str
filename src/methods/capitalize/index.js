@@ -2,7 +2,7 @@ import trim from '../trim'
 
 /**
  * @function capitalize
- * @description Capitalizes a string
+ * @description Capitalizes a string after applying a trim to it
  * @param {String} str
  * @return {String}
  * @example
@@ -10,7 +10,7 @@ import trim from '../trim'
  * // Test
  * @example
  * str('TEST').capitalize()
- * // Tets
+ * // Test
  */
 
 export default str => {
