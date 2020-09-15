@@ -1,11 +1,11 @@
 {
   "source": {
-    "include": "src/"
+    "include": "./src"
   },
   "opts": {
-    "template": "scripts/docs",
+    "template": "./docs-template",
     "encoding": "utf-8",
-    "destination": "docs/",
+    "destination": "./docs",
     "recurse": true,
     "verbose": true
   },

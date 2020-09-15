@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>str browser test</title>
+  <script src="/dist/str.browser.js"></script>
+</head>
+<body>
+  <h1>
+    str browser test
+  </h1>
+</body>
+
+<script>
+  var initialString = 'mAneLeT'
+  var strInstance = new window.str(initialString)
+  console.table([
+    `initial: ${initialString}`,
+    `slugified by instance: ${strInstance.slugify()}`
+    `slugified by function: ${window.str.slugify(initialString)}`
+  ])
+</script>
+</html>

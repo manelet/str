@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: lower/index.js</title>
+    <title>JSDoc: Source: camelcase/index.js</title>
     <meta name="viewport" content="width=device-width">
 
     <script src="scripts/prettify/prettify.js"> </script>
@@ -21,7 +21,7 @@
 
 <div class="wrapper">
     <div id="main">
-        <!--<h1 class="page-title">Source: lower/index.js</h1>-->
+        <!--<h1 class="page-title">Source: camelcase/index.js</h1>-->
         
 
 
@@ -29,19 +29,26 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @function lower
- * @description Transform str to lower case
- * @param {String} str
- * @return {String} Lower cased string
+            <pre class="prettyprint source linenums"><code>import trim from '../trim'
+import capitalize from '../capitalize'
+
+/**
+ * @function camelcase
+ * @description Returns a string in camelcase after trimming it
+ * @param {String} string
+ * @return {String} The camelcase string
  * @example
- * lower('TEST')
- * // test
+ * camelcase(' This is a tesT ')
+ * // thisIsATest
  * @example
- * str('TEST').lower().value
- * // test
+ * str(' This is a tesT ').camelcase().value
+ * // thisIsATest
  */
-export default str => str.toLowerCase()
+
+export default string => trim(string)
+  .toLowerCase()
+  .split(' ')
+  .reduce((acc, word, i) => acc + (i === 0 ? word : capitalize(word)), '')
 </code></pre>
         </article>
     </section>
