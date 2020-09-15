@@ -1,6 +1,6 @@
 {
   "name": "str",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "⚙️ String manipulation library",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,11 @@
     "type": "git",
     "url": "git+https://github.com/manelet/str.git"
   },
-  "keywords": ["str", "string manipulation", "slugify"],
+  "keywords": [
+    "str",
+    "string manipulation",
+    "slugify"
+  ],
   "author": "Manel Escuer",
   "license": "ISC",
   "bugs": {
