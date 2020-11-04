@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/manelgarcia/str/branch/master/graph/badge.svg)](https://codecov.io/gh/manelgarcia/str) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/manelgarcia/str/compare) [![Size](https://img.badgesize.io/manelgarcia/str/master/dist/str.min.js)](https://npmjs.com/package/str)
+[![codecov](https://codecov.io/gh/manelet/str/branch/master/graph/badge.svg)](https://codecov.io/gh/manelet/str) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/manelet/str/compare) [![Size](https://img.badgesize.io/manelet/str/master/dist/str.min.js)](https://npmjs.com/package/str)
 
 # str
 
