@@ -1,6 +1,6 @@
 /* global describe, it */
 import { expect } from 'chai'
-import { slugify } from './slugify'
+import slugify from './slugify'
 // import str from '../..'
 
 describe('slugify test suite', () => {

@@ -1,6 +1,6 @@
 /* global describe, it */
 import { expect } from 'chai'
-import camelcase from '.'
+import camelcase from './camelcase'
 // import str from '../..'
 
 describe('camelcase test suite', () => {
