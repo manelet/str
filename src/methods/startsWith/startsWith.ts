@@ -13,4 +13,5 @@
  * // true
  */
 
-export default (str, sub, pos = 0) => String(str).indexOf(sub, pos) === pos
+export default (str: string, sub: string, pos?: number) =>
+  String(str).indexOf(sub, pos || 0) === (pos || 0)

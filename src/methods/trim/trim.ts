@@ -10,7 +10,7 @@
  * str(' This is a tesT ').trim().value
  * // This is a tesT
  */
-const trim = str =>
+const trim = (str: string): string =>
   str
     .replace(/^\s+/, '')
     .replace(/\s+$/, '')

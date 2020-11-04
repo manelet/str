@@ -2,12 +2,16 @@
   "name": "str",
   "version": "1.2.4",
   "description": "⚙️ String manipulation library",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "browser": "dist/str.js",
+  "types": "types/index.d.ts",
   "scripts": {
-    "test": "nyc mocha './src/**/*.spec.js' --require @babel/register --reporter spec",
-    "start": "npx babel-node ./src/index.js",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc mocha './src/**/*.spec.ts' -r ts-node/register --reporter spec",
+    "start": "rollup -cw",
     "watch:docs": "npx nodemon --watch ./scripts/docs/tmpl --watch ./scripts/docs/static/styles --watch ./scripts/docs/static/scripts --ext tmpl,css,js --exec \"npm run build:docs\"",
     "build": "rollup -c",
+    "prebuild": "rimraf ./dist",
     "build:docs": "rm -fr ./docs && jsdoc -c .jsdoc.json -R ./README.md",
     "postbuild:docs": "git add . && git com -am 'Deploy' && git push && npm version patch -m 'fix individual methods import' && npm publish ./dist",
     "deploy": "npm run build",
@@ -32,20 +36,10 @@
   },
   "homepage": "https://github.com/manelet/str#readme",
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/node": "^7.10.5",
-    "@babel/plugin-external-helpers": "^7.10.4",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
-    "@babel/plugin-transform-runtime": "^7.11.5",
-    "@babel/polyfill": "^7.11.5",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/register": "^7.11.5",
-    "@rollup/plugin-babel": "^5.2.1",
-    "@rollup/plugin-node-resolve": "^9.0.0",
-    "babel-plugin-add-module-exports": "^1.0.4",
-    "babel-plugin-transform-import-paths": "^1.0.3",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@types/mocha": "^8.0.3",
     "chai": "^4.2.0",
     "codecov": "^3.7.2",
     "eslint-utils": "^1.4.3",
@@ -57,6 +51,20 @@
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-terser": "^4.0.4",
-    "standard": "^12.0.1"
+    "rollup-plugin-typescript2": "^0.29.0",
+    "standard": "^12.0.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "all": false,
+    "check-coverage": true,
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.spec.ts"
+    ]
   }
 }

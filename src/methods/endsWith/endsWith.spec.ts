@@ -1,7 +1,7 @@
 /* global describe, it */
 import { expect } from 'chai'
-import endsWith from './'
-import str from '../../'
+import endsWith from './endsWith'
+// import str from '../..'
 
 describe('endsWith test suite', () => {
   it('should check if a string ends with a substring', () =>

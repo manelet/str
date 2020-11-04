@@ -1,5 +1,5 @@
-import trim from '../trim'
-import capitalize from '../capitalize'
+import trim from '../trim/trim'
+import capitalize from '../capitalize/capitalize'
 
 /**
  * @function camelcase
@@ -14,7 +14,7 @@ import capitalize from '../capitalize'
  * // thisIsATest
  */
 
-export default string => trim(string)
+export default (string: string): string => trim(string)
   .toLowerCase()
   .split(' ')
   .reduce((acc, word, i) => acc + (i === 0 ? word : capitalize(word)), '')

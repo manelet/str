@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>str browser test</title>
-  <script src="/dist/str.browser.js"></script>
+  <script src="./dist/index.bundle.js"></script>
 </head>
 <body>
   <h1>
@@ -13,12 +13,14 @@
 </body>
 
 <script>
+  var slugify = window.str.slugify
   var initialString = 'mAneLeT'
-  var strInstance = new window.str(initialString)
-  console.table([
-    `initial: ${initialString}`,
-    `slugified by instance: ${strInstance.slugify()}`
-    `slugified by function: ${window.str.slugify(initialString)}`
-  ])
+  console.log(slugify(initialString));
+  // var strInstance = new window.str(initialString)
+  // console.table([
+  //   `initial: ${initialString}`,
+  //   `slugified by instance: ${strInstance.slugify()}`
+  //   `slugified by function: ${window.str.slugify(initialString)}`
+  // ])
 </script>
 </html>

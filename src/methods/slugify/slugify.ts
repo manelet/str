@@ -1,4 +1,4 @@
-import trim from '../trim'
+import trim from '../trim/trim'
 
 /**
  * @function slugify
@@ -16,7 +16,7 @@ import trim from '../trim'
  * str(' This is a tesT ').slugify().value
  * // this-is-a-test
  */
-const slugify = (str, sep = '-') =>
+const slugify = (str: string, sep: string = '-'): string =>
   trim(str)
     .toLowerCase()
     .replace(/ /g, sep) // Cambio espacios por el separador

@@ -13,10 +13,10 @@
  * // true
  */
 
-const endsWith = (str, sub, pos) => {
+const endsWith = (str: string, sub: string, pos?: number) => {
   str = String(str)
 
-  if (!pos || typeof pos !== 'number' || !isFinite(pos) || Math.floor(pos) !== pos || pos > str.length) {
+  if (!pos || !isFinite(pos) || Math.floor(pos) !== pos || pos > str.length) {
     pos = str.length
   }
 
