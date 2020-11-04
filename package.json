@@ -9,7 +9,7 @@
   "scripts": {
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc --reporter=lcov mocha './src/**/*.spec.ts' -r ts-node/register",
     "start": "rollup -cw",
-    "build": "rollup -c",
+    "build": "rollup -c && rollup -c rollup.browser.config.js",
     "prebuild": "rimraf ./dist",
     "docs:build": "rm -fr ./docs && jsdoc -c .jsdoc.json  -R ./README.md",
     "docs:preview": "npx serve ./docs",
