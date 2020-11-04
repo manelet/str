@@ -7,7 +7,7 @@
   "browser": "dist/str.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc mocha './src/**/*.spec.ts' -r ts-node/register --reporter spec",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc --reporter=lcov mocha './src/**/*.spec.ts' -r ts-node/register",
     "start": "rollup -cw",
     "build": "rollup -c",
     "prebuild": "rimraf ./dist",
