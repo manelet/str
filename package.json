@@ -11,8 +11,8 @@
     "start": "rollup -cw",
     "build": "rollup -c",
     "prebuild": "rimraf ./dist",
-    "docs:watch": "npx nodemon --watch ./scripts/docs/tmpl --watch ./scripts/docs/static/styles --watch ./scripts/docs/static/scripts --ext tmpl,css,js --exec \"npm run build:docs\"",
-    "docs:build": "rm -fr ./docs && jsdoc -c .jsdoc.json -R ./README.md",
+    "docs:build": "rm -fr ./docs && jsdoc -c .jsdoc.json  -R ./README.md",
+    "docs:preview": "npx serve ./docs",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -35,6 +35,7 @@
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@types/mocha": "^8.0.3",
+    "better-docs": "^2.3.2",
     "chai": "^4.2.0",
     "codecov": "^3.8.1",
     "eslint-utils": "^2.1.0",

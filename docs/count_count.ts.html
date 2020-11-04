@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Home</title>
+  <title> count/count.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -73,58 +75,36 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p></p>
-                    <h1>Home</h1>
+                    <p>Source</p>
+                    <h1>count/count.ts</h1>
                 </header>
                 
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><p><a href="https://codecov.io/gh/manelgarcia/str"><img src="https://codecov.io/gh/manelgarcia/str/branch/master/graph/badge.svg" alt="codecov"></a> <a href="https://github.com/manelgarcia/str/compare"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a> <a href="https://npmjs.com/package/str"><img src="https://img.badgesize.io/manelgarcia/str/master/dist/str.min.js" alt="Size"></a></p>
-<h1>str</h1>
-<h2>TODO</h2>
-<ul>
-<li>[ ] Style docs</li>
-</ul>
-<h2>Proposals</h2>
-<ul>
-<li>[x] startsWith</li>
-<li>[x] endsWith</li>
-<li>[ ] replace</li>
-<li>[x] count</li>
-<li>[x] capitalize</li>
-<li>[x] upper</li>
-<li>[ ] camelcase (pascalCase, etc...)</li>
-</ul>
-<h2>Methods</h2>
-<ul>
-<li>slugify</li>
-<li>trim</li>
-<li>lower</li>
-</ul></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @function count
+ * @description Counts characters in a string
+ * @param {String} str
+ * @return {Number} Number of characters
+ * @example
+ * count('test')
+ * // 4
+ * @example
+ * str('test').length
+ * // 4
+ * @example
+ * str('test').count()
+ * // 4
+ */
+
+export default str => String(str).length
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

@@ -14,7 +14,8 @@ import capitalize from '../capitalize/capitalize'
  * // thisIsATest
  */
 
-export default (string: string): string => trim(string)
-  .toLowerCase()
-  .split(' ')
-  .reduce((acc, word, i) => acc + (i === 0 ? word : capitalize(word)), '')
+export default (string: string): string =>
+  trim(string)
+    .toLowerCase()
+    .split(' ')
+    .reduce((acc, word, i) => acc + (i === 0 ? word : capitalize(word)), '')

@@ -1,9 +1,10 @@
 {
   "source": {
-    "include": "./src"
+    "include": "./src",
+    "includePattern": "\\.(jsx|js|ts|tsx)$"
   },
   "opts": {
-    "template": "./docs-template",
+    "template": "node_modules/better-docs",
     "encoding": "utf-8",
     "destination": "./docs",
     "recurse": true,
@@ -13,6 +14,13 @@
     "outputSourceFiles": false
   },
   "plugins": [
-    "plugins/markdown"
-  ]
+    "plugins/markdown",
+    "node_modules/better-docs/typescript"
+  ],
+  "typescript": {
+    "moduleRoot": "./src"
+  },
+  "tags": {
+    "allowUnknownTags": ["optional"]
+  }   
 }
