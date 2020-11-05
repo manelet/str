@@ -31,6 +31,7 @@ jobs:
     - run: npm test
     - run: npm run build --if-present
     - run: npm run docs:build
+    - run: cd dist
     - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
