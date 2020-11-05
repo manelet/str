@@ -23,16 +23,10 @@ export default {
     },
     {
       dir: './dist',
-      entryFileNames: '[name].mjs',
+      entryFileNames: '[name]_es.mjs',
       format: 'es',
       sourcemap: false
-      // esModule: false
     },
-    // {
-    //   file: pkg.browser,
-    //   format: 'iife',
-    //   name: 'str'
-    // }
   ],
   external: [...Object.keys(pkg.dependencies || {})],
   plugins: [
@@ -52,7 +46,7 @@ export default {
           transform: (contents) => {
             const p = JSON.parse(contents.toString('utf8'))
             p.main = p.main.replace('dist/', '')
-            p.module = p.module.replace('dist/', '')
+            // p.module = p.module.replace('dist/', '')
             p.browser = p.browser.replace('dist/', '')
             return JSON.stringify(p, null, 2)
           }

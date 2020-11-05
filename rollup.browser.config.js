@@ -7,7 +7,7 @@ export default {
   input: './src/index.ts',
   output: [
     {
-      file: pkg.browser,
+      file: './dist/str.js',
       format: 'iife',
       name: 'str',
       sourcemap: true
@@ -18,6 +18,12 @@ export default {
       name: 'str',
       plugins: [terser()],
       sourcemap: true
+    },
+    {
+      file: pkg.browser,
+      format: 'umd',
+      name: 'str',
+      plugins: [terser()],
     }
   ],
   external: [...Object.keys(pkg.dependencies || {})],

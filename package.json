@@ -3,8 +3,8 @@
   "version": "0.0.0-development",
   "description": "⚙️ String manipulation library",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "browser": "dist/str.js",
+  "module": "dist/index_es.mjs",
+  "browser": "dist/index_umd.js",
   "types": "types/index.d.ts",
   "scripts": {
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc --reporter=lcov mocha './src/**/*.spec.ts' -r ts-node/register",
