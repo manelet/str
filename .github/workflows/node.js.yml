@@ -31,12 +31,11 @@ jobs:
     - run: npm test
     - run: npm run build --if-present
     - run: npm run docs:build
-    - run: cd dist
     - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: npm run semantic-release
+      run: cd dist && npm run semantic-release
     - uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
