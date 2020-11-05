@@ -19,11 +19,13 @@ export default {
       format: 'cjs',
       exports: 'default',
       // esModule: false
+      sourcemap: false
     },
     {
       dir: './dist',
       entryFileNames: '[name].mjs',
       format: 'es',
+      sourcemap: false
       // esModule: false
     },
     // {

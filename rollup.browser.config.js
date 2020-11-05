@@ -9,7 +9,15 @@ export default {
     {
       file: pkg.browser,
       format: 'iife',
-      name: 'str'
+      name: 'str',
+      sourcemap: true
+    },
+    {
+      file: './dist/str.min.js',
+      format: 'iife',
+      name: 'str',
+      plugins: [terser()],
+      sourcemap: true
     }
   ],
   external: [...Object.keys(pkg.dependencies || {})],
@@ -20,8 +28,7 @@ export default {
       // rollupCommonJSResolveHack: true,
       clean: true,
       // useTsconfigDeclarationDir: false
-    }),
-    terser()
+    })
   ]
 }
 
