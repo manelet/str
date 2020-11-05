@@ -1,40 +1,21 @@
-// import camelcase from './methods/camelcase'
+import camelcase from './methods/camelcase/camelcase'
 import slugify from './methods/slugify/slugify'
-
-// export * as slugify from './methods/slugify/slugify'
+import capitalize from './methods/capitalize/capitalize'
+import count from './methods/count/count'
+import endsWith from './methods/endsWith/endsWith'
+import startsWith from './methods/startsWith/startsWith'
+import lower from './methods/lower/lower'
+import upper from './methods/upper/upper'
+import trim from './methods/trim/trim'
 
 export default {
-  slugify
+  slugify,
+  camelcase,
+  capitalize,
+  count,
+  endsWith,
+  startsWith,
+  lower,
+  upper,
+  trim
 }
-
-// export * from './methods'
-// export * as slugify from './methods/slugify'
-
-// const NOT_CHAINABLE = ['count', 'startsWith', 'endsWith']
-
-// class Str {
-//   constructor (value) {
-//     this.value = value
-
-//     Object.keys(functions).map(f => {
-//       this[f] = function (...args) {
-//         const r = functions[f].call(null, this.value, ...args)
-
-//         if (NOT_CHAINABLE.includes(f)) {
-//           return r
-//         }
-
-//         this.value = r
-//         return this
-//       }
-//     })
-
-//     this.length = this.count(this.value)
-//   }
-// }
-
-// function str (value) {
-//   return new Str(value)
-// }
-
-// export default str
