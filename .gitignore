@@ -1,7 +1,7 @@
-dist/*
-!dist/str.js
-!dist/str.min.js
-!dist/str.min.js.map
+# dist/*
+# !dist/str.js
+# !dist/str.min.js
+# !dist/str.min.js.map
 
 .DS_Store
 
